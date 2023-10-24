@@ -19,7 +19,7 @@
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1 text-hijau">
-            <li><a href="{{route('blog')}}" class="{{ request()->is(route('blog')) ? 'bg-hijau text-kuning' : '' }}">BLOG</a></li>
+            <li><a href="{{route('blog')}}" class="{{ request()->is('blog') ? 'bg-hijau text-kuning' : '' }}">BLOG</a></li>
             <li><a>JOURNAL</a></li>
             <li><a>BOOK REVIEWS</a></li>
             <li><a>NEWSLETTER</a></li>
