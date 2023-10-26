@@ -8,6 +8,7 @@ use Filament\Tables;
 
 use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Plank\Metable\Metable;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\TextInput;
@@ -23,6 +24,7 @@ use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 
 class UserResource extends Resource
 {
+    use Metable;
     protected static ?string $model = User::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
