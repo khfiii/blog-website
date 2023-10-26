@@ -20,6 +20,18 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        Schema::create('user_meta', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('metable_type');
+            $table->unsignedInteger('metable_id');
+            $table->string('type')->default('null');
+            $table->string('key')->index();
+            $table->longtext('value');
+            $table->index(['metable_type', 'metable_id']);
+
+        });
+
     }
 
     /**

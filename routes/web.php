@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\JurnalController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,5 +26,10 @@ Route::controller(HomeController::class)->group(function(){
 
 Route::controller(BlogController::class)->group(function(){
     Route::get('blog', 'show')->name('blog');
+
+});
+
+Route::controller(JurnalController::class)->group(function(){
+    Route::get('jurnal', 'show')->name('jurnal');
 
 });

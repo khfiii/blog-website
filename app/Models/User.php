@@ -3,6 +3,8 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\UserMeta;
+use Plank\Metable\Metable;
 use Spatie\Image\Manipulations;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\MediaLibrary\HasMedia;
@@ -14,7 +16,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable  implements HasMedia
 {
-    use HasApiTokens, HasFactory, Notifiable, InteractsWithMedia;
+    use HasApiTokens, HasFactory, Notifiable, InteractsWithMedia , Metable;
 
     /**
      * The attributes that are mass assignable.
@@ -53,5 +55,10 @@ class User extends Authenticatable  implements HasMedia
             ->addMediaConversion('preview')
             ->fit(Manipulations::FIT_CROP, 300, 300)
             ->nonQueued();
+    }
+
+    protected function getMetaClassName(): string
+    {
+        return UserMeta::class;
     }
 }
