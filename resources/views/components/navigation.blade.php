@@ -14,7 +14,9 @@
                 <li><a href="{{ route('jurnal') }}"
                         class="{{ request()->is('jurnal') ? 'bg-hijau text-kuning' : '' }}">JOURNAL</a></li>
 
-                <li><a>BOOK REVIEWS</a></li>
+                <li><a href="{{ route('book') }}" class="{{ request()->is('book') ? 'bg-hijau text-kuning' : '' }}">BOOK
+                        REVIEWS</a></li>
+
                 <li><a>NEWSLETTER</a></li>
                 <li><a>COURSES</a></li>
             </ul>
@@ -28,7 +30,8 @@
             </li>
             <li><a href="{{ route('jurnal') }}"
                     class="{{ request()->is('jurnal') ? 'bg-hijau text-kuning' : '' }}">JOURNAL</a></li>
-            <li><a>BOOK REVIEWS</a></li>
+            <li><a href="{{ route('book') }}" class="{{ request()->is('book') ? 'bg-hijau text-kuning' : '' }}">BOOK
+                    REVIEWS</a></li>
             <li><a>NEWSLETTER</a></li>
             <li><a>COURSES</a></li>
         </ul>
