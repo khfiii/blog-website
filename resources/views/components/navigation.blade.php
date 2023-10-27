@@ -21,8 +21,7 @@
                 <li><a>COURSES</a></li>
             </ul>
         </div>
-        <a href="{{ route('home') }}" class="btn btn-xs text-hijau bg-primary border-none text-sm font-normal">AKHSAN
-            ZIDAN</a>
+        <a href="{{ route('home') }}" class="btn btn-xs text-hijau bg-primary border-none text-sm font-normal">ASHABUL KAHFI</a>
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1 text-hijau">
