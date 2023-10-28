@@ -4,6 +4,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JurnalController;
+use App\Http\Controllers\NewslatterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,5 +38,10 @@ Route::controller(JurnalController::class)->group(function(){
 
 Route::controller(BookController::class)->group(function(){
     Route::get('book', 'show')->name('book');
+
+});
+
+Route::controller(NewslatterController::class)->group(function(){
+    Route::get('newslatter', 'show')->name('newslatter');
 
 });
