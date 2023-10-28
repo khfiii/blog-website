@@ -16,22 +16,26 @@
 
                 <li><a href="{{ route('book') }}" class="{{ request()->is('book') ? 'bg-hijau text-kuning' : '' }}">BOOK
                         REVIEWS</a></li>
+                <li><a href="{{ route('newslatter') }}"
+                        class="{{ request()->is('newslatter') ? 'bg-hijau text-kuning' : '' }}">NEWSLETTER</a></li>
 
-                <li><a>NEWSLETTER</a></li>
                 <li><a>COURSES</a></li>
             </ul>
         </div>
-        <a href="{{ route('home') }}" class="btn btn-xs text-hijau bg-primary border-none text-sm font-normal">ASHABUL KAHFI</a>
+        <a href="{{ route('home') }}" class="btn btn-xs text-hijau bg-primary border-none text-sm font-normal">ASHABUL
+            KAHFI</a>
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1 text-hijau">
-            <li><a href="{{ route('blog') }}" class="{{ request()->is('blog') ? 'bg-hijau text-kuning' : '' }}">BLOG</a>
+            <li><a href="{{ route('blog') }}"
+                    class="{{ request()->is('blog') ? 'bg-hijau text-kuning' : '' }}">BLOG</a>
             </li>
             <li><a href="{{ route('jurnal') }}"
                     class="{{ request()->is('jurnal') ? 'bg-hijau text-kuning' : '' }}">JOURNAL</a></li>
             <li><a href="{{ route('book') }}" class="{{ request()->is('book') ? 'bg-hijau text-kuning' : '' }}">BOOK
                     REVIEWS</a></li>
-            <li><a>NEWSLETTER</a></li>
+            <li><a href="{{ route('newslatter') }}"
+                    class="{{ request()->is('newslatter') ? 'bg-hijau text-kuning' : '' }}">NEWSLETTER</a></li>
             <li><a>COURSES</a></li>
         </ul>
     </div>

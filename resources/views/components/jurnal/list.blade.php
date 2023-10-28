@@ -1,4 +1,4 @@
-<div class="flex flex-col lg:px-20 py-20 gap-4">
+<div class="flex flex-col lg:px-20 py-10 gap-4">
     <div class="grid grid-cols-12 gap-x-44">
         <div class="grid col-span-6">
             <div class="inline-flex gap-4 max-w-2xl items-center">
