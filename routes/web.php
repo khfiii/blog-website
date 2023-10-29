@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JurnalController;
 use App\Http\Controllers\NewslatterController;
@@ -43,5 +44,10 @@ Route::controller(BookController::class)->group(function(){
 
 Route::controller(NewslatterController::class)->group(function(){
     Route::get('newslatter', 'show')->name('newslatter');
+
+});
+
+Route::controller(CourseController::class)->group(function(){
+    Route::get('course', 'show')->name('course');
 
 });

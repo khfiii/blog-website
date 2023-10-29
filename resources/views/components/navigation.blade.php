@@ -19,11 +19,12 @@
                 <li><a href="{{ route('newslatter') }}"
                         class="{{ request()->is('newslatter') ? 'bg-hijau text-kuning' : '' }}">NEWSLETTER</a></li>
 
-                <li><a>COURSES</a></li>
+                <li><a href="{{ route('course') }}"
+                        class="{{ request()->is('course') ? 'bg-hijau text-kuning' : '' }}">COURSES</a></li>
+
             </ul>
         </div>
-        <a href="{{ route('home') }}" class="btn btn-xs text-hijau bg-primary border-none text-sm font-normal">ASHABUL
-            KAHFI</a>
+        <a href="{{ route('home') }}" class="btn btn-xs text-hijau bg-primary border-none text-sm font-normal">AKHSAN ZIDAN</a>
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1 text-hijau">
@@ -36,7 +37,8 @@
                     REVIEWS</a></li>
             <li><a href="{{ route('newslatter') }}"
                     class="{{ request()->is('newslatter') ? 'bg-hijau text-kuning' : '' }}">NEWSLETTER</a></li>
-            <li><a>COURSES</a></li>
+            <li><a href="{{ route('course') }}"
+                    class="{{ request()->is('course') ? 'bg-hijau text-kuning' : '' }}">COURSES</a></li>
         </ul>
     </div>
     <div class="navbar-end lg:px-16">
