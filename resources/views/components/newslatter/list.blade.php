@@ -1,5 +1,5 @@
-<div class="flex flex-col lg:px-20 py-10">
-    <div class="flex justify-between gap-2 flex-wrap p-16">
+<div class="flex flex-col lg:px-20 py-20 gap-y-20">
+    <div class="flex justify-between gap-2 flex-wrap">
         <div class="basis-full lg:basis-[40%]">
             <div class="flex flex-col gap-y-5">
                 <div class="text-2xl uppercase font-bold text-gray-600"> <span
@@ -45,7 +45,7 @@
         </div>
     </div>
 
-    <div class="flex flex-col px-16 gap-2">
+    <div class="flex flex-col gap-2">
         <div class="flex justify-between w-full border border-coklat p-5">
             <div class="inline-flex items-center gap-12">
                 <time class="text-base text-hijau font-medium"> 25 May 2025 </time>
