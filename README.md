@@ -51,8 +51,3 @@ php artisan serve
 
 
 
-    
-## Screenshots
-
-![App Screenshot](https://iili.io/JKm4VOx.png)
-
