@@ -1,7 +1,7 @@
 
 # Hi there 👋
 
-I'm kahfi. I am solo web developer working my way through my senior in high school, and i spent my time to practice, and practice. This is my first blog post, i want to share my first real laravel project with you. 
+I'm kahfi. I am solo web developer working my way through my senior in high school, and i spent my time to code. This is my first blog post, i want to share my first real laravel project with you. 
 
 ## Requirement
 
