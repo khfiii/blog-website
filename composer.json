@@ -18,7 +18,8 @@
         "laravel/tinker": "^2.8",
         "plank/laravel-metable": "^5.4",
         "spatie/laravel-medialibrary": "^10.0.0",
-        "troccoli/blade-health-icons": "^2.0"
+        "troccoli/blade-health-icons": "^2.0",
+        "wire-elements/modal": "^2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
