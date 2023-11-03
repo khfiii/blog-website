@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8945ca832c12d53a6b5479226d84685a",
+    "content-hash": "8532a7e03ff348cdd685a509c8396c9d",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -2034,6 +2034,79 @@
             "time": "2023-08-27T10:19:19+00:00"
         },
         {
+            "name": "icetalker/filament-chatgpt-bot",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/icetalker/filament-chatgpt-bot.git",
+                "reference": "92606ac0d91251498d9c89ff116f15b3008b2c34"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/icetalker/filament-chatgpt-bot/zipball/92606ac0d91251498d9c89ff116f15b3008b2c34",
+                "reference": "92606ac0d91251498d9c89ff116f15b3008b2c34",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^9.0|^10.0",
+                "livewire/livewire": "^3.0",
+                "orhanerday/open-ai": "^4.7",
+                "php": ">=7.4",
+                "spatie/laravel-package-tools": "^1.14.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^7.9",
+                "nunomaduro/larastan": "^2.0.1",
+                "orchestra/testbench": "^8.0",
+                "pestphp/pest": "^2.0",
+                "pestphp/pest-plugin-arch": "^2.0",
+                "pestphp/pest-plugin-laravel": "^2.0",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Icetalker\\FilamentChatgptBot\\FilamentChatgptBotServiceProvider"
+                    ],
+                    "aliases": {
+                        "FilamentChatgptBot": "Icetalker\\FilamentChatgptBot\\Facades\\FilamentChatgptBot"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Icetalker\\FilamentChatgptBot\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Martin Hwang",
+                    "email": "termlong.com@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Integrate with OpenAI ChatGPT",
+            "homepage": "https://github.com/icetalker/filament-chatgpt-bot",
+            "keywords": [
+                "filament-chatgpt-bot",
+                "icetalker",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/icetalker/filament-chatgpt-bot/issues",
+                "source": "https://github.com/icetalker/filament-chatgpt-bot/tree/v1.0.0"
+            },
+            "time": "2023-09-30T09:01:29+00:00"
+        },
+        {
             "name": "intervention/image",
             "version": "2.7.2",
             "source": {
@@ -3984,6 +4057,65 @@
                 }
             ],
             "time": "2023-02-08T01:06:31+00:00"
+        },
+        {
+            "name": "orhanerday/open-ai",
+            "version": "4.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orhanerday/open-ai.git",
+                "reference": "14ba8185120d6366756fcf7c5b403c63f3efd852"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orhanerday/open-ai/zipball/14ba8185120d6366756fcf7c5b403c63f3efd852",
+                "reference": "14ba8185120d6366756fcf7c5b403c63f3efd852",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "pestphp/pest": "^1.20",
+                "spatie/ray": "^1.28"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Orhanerday\\OpenAi\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Orhan Erday",
+                    "email": "orhanerday@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "OpenAI GPT-3 Api Client in PHP",
+            "homepage": "https://github.com/orhanerday/open-ai",
+            "keywords": [
+                "open-ai",
+                "orhanerday"
+            ],
+            "support": {
+                "issues": "https://github.com/orhanerday/open-ai/issues",
+                "source": "https://github.com/orhanerday/open-ai/tree/4.9"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/orhanerday",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-10-28T17:36:07+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -10540,5 +10672,5 @@
         "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
