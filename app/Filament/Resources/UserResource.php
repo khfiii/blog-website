@@ -25,6 +25,7 @@ use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 class UserResource extends Resource
 {
     use Metable;
+
     protected static ?string $model = User::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
