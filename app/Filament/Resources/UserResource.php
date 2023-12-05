@@ -21,6 +21,7 @@ use App\Filament\Resources\UserResource\Pages\CreateUser;
 use App\Filament\Resources\UserResource\RelationManagers;
 use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+use Filament\Tables\Columns\TextColumn;
 
 class UserResource extends Resource
 {
@@ -28,7 +29,12 @@ class UserResource extends Resource
 
     protected static ?string $model = User::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Settings';
+
+    protected static ?string $navigationLabel = 'My Account';
+
+
+    protected static ?string $navigationIcon = 'heroicon-o-user';
 
     public static function form(Form $form): Form
     {
@@ -37,7 +43,11 @@ class UserResource extends Resource
                 Grid::make(1)
                     ->columnSpan(8)
                     ->schema([
-                        SpatieMediaLibraryFileUpload::make('image'),
+                        SpatieMediaLibraryFileUpload::make('image')
+                        ->avatar()
+                        ->collection('image')
+                        ->label('Profile')
+                        ->alignCenter(),
                         TextInput::make('name'),
                         TextInput::make('email'),
                         TextInput::make('password'),
@@ -49,7 +59,10 @@ class UserResource extends Resource
     {
         return $table
             ->columns([
-                SpatieMediaLibraryImageColumn::make('image')
+                TextColumn::make('name'),
+                TextColumn::make('email'),
+
+
             ])
             ->filters([
                 //
@@ -75,8 +88,6 @@ class UserResource extends Resource
     {
         return [
             'index' => ListUsers::route('/'),
-            'create' => CreateUser::route('/create'),
-            'edit' => EditUser::route('/{record}/edit'),
         ];
     }
 }
