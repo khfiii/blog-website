@@ -3,20 +3,24 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Filament\Panel;
 use App\Models\UserMeta;
 use Plank\Metable\Metable;
 use Spatie\Image\Manipulations;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\MediaLibrary\HasMedia;
+use Filament\Models\Contracts\HasAvatar;
 use Illuminate\Notifications\Notifiable;
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Models\Contracts\HasName;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable  implements HasMedia
+class User extends Authenticatable  implements HasMedia, FilamentUser, HasAvatar, HasName
 {
-    use HasApiTokens, HasFactory, Notifiable, InteractsWithMedia , Metable;
+    use HasApiTokens, HasFactory, Notifiable, InteractsWithMedia, Metable;
 
     /**
      * The attributes that are mass assignable.
@@ -35,7 +39,6 @@ class User extends Authenticatable  implements HasMedia
      * @var array<int, string>
      */
     protected $hidden = [
-        'password',
         'remember_token',
     ];
 
@@ -49,16 +52,28 @@ class User extends Authenticatable  implements HasMedia
         'password' => 'hashed',
     ];
 
-    public function registerMediaConversions(Media $media = null): void
+    public function getFilamentName(): string
     {
-        $this
-            ->addMediaConversion('preview')
-            ->fit(Manipulations::FIT_CROP, 300, 300)
-            ->nonQueued();
+        return $this->name;
     }
+
+
 
     protected function getMetaClassName(): string
     {
         return UserMeta::class;
+    }
+
+    public function getFilamentAvatarUrl(): ?string
+    {
+
+        return $this->getFirstMediaUrl('image', 'avatar');
+    }
+
+    public function canAccessPanel(Panel $panel): bool
+    {
+
+
+        return true;
     }
 }
